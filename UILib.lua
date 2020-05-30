@@ -1,4 +1,4 @@
-local HentaiLib = {Content = {}};
+local BustedOwlLib = {Content = {}};
 local config = {};
 
 local placeID = tostring(game.PlaceId);
@@ -20,10 +20,10 @@ script = popupGui.mainScript;
 local popup = loadstring(popupGui.mainScript.Source)();
 script = oldScript;
 
-local owlLibGui = game:GetObjects("rbxassetid://4530443679")[1];
-owlLibGui.Parent = game:GetService("CoreGui");
-owlLibGui.Name = httpService:GenerateGUID(false);
-local mainFrame = owlLibGui.mainFrame;
+local bustedowlLibGui = game:GetObjects("rbxassetid://4530443679")[1];
+bustedowlLibGui.Parent = game:GetService("CoreGui");
+bustedowlLibGui.Name = httpService:GenerateGUID(false);
+local mainFrame = bustedowlLibGui.mainFrame;
 
 local tweenService = game:GetService("TweenService");
 local inputService = game:GetService("UserInputService");
@@ -113,9 +113,9 @@ inputService.InputBegan:Connect(function(input, onGui)
     end;
 end);
 
-function OwlLib:SetCategory() end;
+function BustedOwlLib:SetCategory() end;
 
-function OwlLib.Content:Resize(scrollingFrame)
+function BustedOwlLib.Content:Resize(scrollingFrame)
     scrollingFrame.CanvasSize = newUDim2(0, 0, 0, (#scrollingFrame:GetChildren() - 1) * 36);
 end;
 
